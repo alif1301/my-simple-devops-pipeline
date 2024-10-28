@@ -3,10 +3,7 @@ on: pull
 
 stages:
   - validate
-  - build
-  - deploy
-  - destroy
-
+  
 
 init:
   stage: .pre
@@ -18,7 +15,7 @@ fmt:
   script:
     - alif-28102024-terraform fmt
 
-    validate:
+  validate:
   stage: validate
   script:
     - alif-28102024-terraform validate
