@@ -1,6 +1,11 @@
 name: Terraform CICD
 on: pull
 
+defaults:
+      run:
+        working-directory: terraform
+
+
 stages:
   - validate
   
@@ -8,14 +13,14 @@ stages:
 init:
   stage: .pre
   script:
-    - gitlab-terraform init
+    - alif-28102024-terraform init
 
 fmt:
   stage: .pre
   script:
     - alif-28102024-terraform fmt
 
-  validate:
+validate:
   stage: validate
   script:
     - alif-28102024-terraform validate

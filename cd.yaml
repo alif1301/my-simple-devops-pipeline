@@ -1,5 +1,10 @@
 name: Terraform CICD
 on: push
+
+ defaults:
+      run:
+        working-directory: terraform
+
 jobs:
  terraform-ci:
    runs-on: ubuntu-latest
