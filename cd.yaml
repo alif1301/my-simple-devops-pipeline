@@ -1,7 +1,7 @@
 name: Terraform CICD
 on: push
 
- defaults:
+defaults:
       run:
         working-directory: terraform
 
